@@ -1,4 +1,4 @@
-package org.example.z1;
+package org.example.notes;
 
 interface NotesService {
     void add(Note note);

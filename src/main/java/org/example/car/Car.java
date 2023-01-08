@@ -1,4 +1,4 @@
-package org.example.z2.car;
+package org.example.car;
 
 interface Car {
     boolean needsFuel();

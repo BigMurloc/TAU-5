@@ -1,20 +1,19 @@
-package org.example.z1;
+package org.example.notes;
 
-
+import org.easymock.EasyMock;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
+class NotesServiceImplTestUsingEasyMock {
 
-class NotesServiceImplTest {
-
-
+    private final NotesStorage mock = EasyMock.createMock(NotesStorage.class);
     @Test
     void shouldAddNoteSuccessfully() {
         //given
         String name = "John";
-        final NotesServiceImpl sut = NotesServiceImpl.createWith(new NoteStorageMock());
+        final NotesServiceImpl sut = NotesServiceImpl.createWith(mock);
         final Note note = new Note(name, 2);
 
         //when
@@ -77,4 +76,5 @@ class NotesServiceImplTest {
         //when
         assertDoesNotThrow(sut::clear);
     }
+
 }

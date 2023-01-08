@@ -7,9 +7,6 @@ import org.easymock.TestSubject;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import java.util.Arrays;
-import java.util.List;
-
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.easymock.EasyMock.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -17,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @ExtendWith(EasyMockExtension.class)
-class FriendshipsMongoTest {
+class FriendshipsMongoEasyMockTest {
 
     @TestSubject
     FriendshipsMongo friendships = new FriendshipsMongo();

@@ -1,6 +1,7 @@
-package org.example.z2;
+package org.example.z2.car;
 
 import org.easymock.EasyMock;
+import org.example.z2.car.Car;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

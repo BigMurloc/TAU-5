@@ -50,7 +50,7 @@ class MessengerTest {
     }
 
     @Test
-    public void shouldNotSendEmptyTemplate() {
+    public void shouldNotSendEmptyMessage() {
         // given
         when(templateEngine.prepareMessage(template, client)).thenReturn("");
         Messenger messenger = new Messenger(mailServer, templateEngine);

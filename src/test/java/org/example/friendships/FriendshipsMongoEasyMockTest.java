@@ -16,11 +16,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(EasyMockExtension.class)
 class FriendshipsMongoEasyMockTest {
 
-    @TestSubject
-    FriendshipsMongo friendships = new FriendshipsMongo();
-
     @Mock(type = MockType.NICE)
     FriendsCollection friends;
+    @TestSubject
+    FriendshipsMongo friendships = new FriendshipsMongo(friends);
 
     @Test
     void shouldNotHaveFriends() {

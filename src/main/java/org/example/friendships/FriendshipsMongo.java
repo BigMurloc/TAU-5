@@ -6,12 +6,8 @@ import java.util.List;
 class FriendshipsMongo {
     private FriendsCollection friends;
 
-    public FriendshipsMongo(){
-        try {
-            friends = new FriendsCollection();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
+    public FriendshipsMongo(FriendsCollection friends){
+        this.friends = friends;
     }
 
     public List<String> getFriendsList(String person){
